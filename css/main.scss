@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+section {
+  position: relative;
+  background: #161623;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  &::before {
+    content: "";
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: linear-gradient(orange, red);
+    border-radius: 50%;
+    transition: 1s;
+    transform: translate(-250px, -250px);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(#2196f3, #31ff38);
+    border-radius: 50%;
+    transition: 1s;
+    transform: translate(250px, 150px);
+  }
+}
+.box {
+  position: relative;
+  min-width: 400px;
+  min-height: 500px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  backdrop-filter: blur(20px);
+  z-index: 10;
+  h1 {
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    padding: 10px;
+    color: #fff;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    input {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid rgba(255, 255, 255, 0.5);
+      border-radius: 10px;
+      margin-bottom: 1rem;
+      color: #fff;
+      background: rgba(255, 255, 255, 0.1);
+      &::placeholder {
+        color: #fff;
+      }
+      &:focus {
+        outline: none;
+        border: 2px solid #fff;
+      }
+    }
+  }
+  .btn-sub {
+    width: 100%;
+    padding: 5px;
+    font-size: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    transition: 1s;
+    &:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-2px);
+    }
+  }
+  .username,
+  .password {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    padding: 10px;
+    color: #fff;
+  }
+  .logo {
+    width: 300px;
+    height: 200px;
+    margin-left: 50px;
+    margin-bottom: 0.5rem;
+  }
+  .reset-pass {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    padding: 10px;
+    color: #fff;
+    margin-bottom: 10px;
+    &:hover {
+      color: #2196f3;
+    }
+  }
+}
